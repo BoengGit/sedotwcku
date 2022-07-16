@@ -71,10 +71,10 @@
     
                                 <div class="form-group mb-0 row mt-2">
                                     <div class="col-sm-7 mt-3">
-                                        <a href="auth-recoverpw.html" class="text-muted"><i class="mdi mdi-lock"></i> Forgot your password?</a>
+                                        <a href="forgotpassword" class="text-muted"><i class="mdi mdi-lock"></i> Forgot your password?</a>
                                     </div>
                                     <div class="col-sm-5 mt-3">
-                                        <a href="auth-register.html" class="text-muted"><i class="mdi mdi-account-circle"></i> Create an account</a>
+                                        <a href="register" class="text-muted"><i class="mdi mdi-account-circle"></i> Create an account</a>
                                     </div>
                                 </div>
                             </form>
@@ -91,7 +91,7 @@
 
         <!-- JAVASCRIPT -->
         <script src="{{ asset('backend/assets/libs/jquery/jquery.min.js') }}></script>
-        <script src="{{ asset('backend/assets/libs/bootstrap/js/bootstrap.bundle.min.js') }}</script>
+        <script src="{{ asset('backend/assets/libs/bootstrap/js/bootstrap.bundle.min.js') }}></script>
         <script src="{{ asset('backend/assets/libs/metismenu/metisMenu.min.js') }}></script>
         <script src="{{ asset('backend/assets/libs/simplebar/simplebar.min.js') }}></script>
         <script src="{{ asset('backend/assets/libs/node-waves/waves.min.js') }}></script>
