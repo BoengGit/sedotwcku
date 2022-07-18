@@ -53,10 +53,10 @@
 
                             <a href="index.html" class="logo logo-light">
                                 <span class="logo-sm">
-                                    <img src="assets/images/logo-sm.png" alt="logo-sm-light" height="22">
+                                    <img src="{{ asset('Backend/assets/images/logo-sm.png') }}" alt="logo-sm-light" height="22">
                                 </span>
                                 <span class="logo-lg">
-                                    <img src="assets/images/logo-light.png" alt="logo-light" height="20">
+                                    <img src="{{ asset('Backend/assets/images/logo-light.png') }}" alt="logo-light" height="20">
                                 </span>
                             </a>
                         </div>
@@ -102,7 +102,7 @@
                     <!-- User details -->
                     <div class="user-profile text-center mt-3">
                         <div class="">
-                            <img src="assets/images/users/avatar-1.jpg" alt="" class="avatar-md rounded-circle">
+                            <img src="{{ asset('Backend/assets/images/users/avatar-1.jpg') }}" alt="" class="avatar-md rounded-circle">
                         </div>
                         <div class="mt-3">
                             <h4 class="font-size-16 mb-1">Julia Hudda</h4>
