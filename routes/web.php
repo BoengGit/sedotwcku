@@ -11,7 +11,9 @@
 |
 */
 
-Route::get('/', function () {
+use Illuminate\Routing\Route;
+
+Routeute::get('/', function () {
     return view('welcome');
     // return redirect('login')
 });
@@ -19,3 +21,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+//crud user
+Route::resource('user', 'UserController');
+

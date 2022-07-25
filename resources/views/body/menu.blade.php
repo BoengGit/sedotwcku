@@ -20,24 +20,35 @@
                         <!-- Left Menu Start -->
                         <ul class="metismenu list-unstyled" id="side-menu">
                             <li class="menu-title">Menu</li>
-
+                            <li>
+                                <a href="{{ route('user.index') }}" class="waves-effect">
+                                    <i class="ri-user-line"></i><span class="badge rounded-pill bg-success float-end">2</span>
+                                    <span>Admin</span>
+                                </a>
+                            </li>
                             <li>
                                 <a href="#" class="waves-effect">
-                                    <i class="ri-user-line"></i><span class="badge rounded-pill bg-success float-end">3</span>
-                                    <span> User Jasa</span>
+                                    <i class="ri-home-line"></i><span class="badge rounded-pill bg-success float-end">2</span>
+                                    <span>Perusahaan</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="waves-effect">
+                                    <i class="ri-user-line"></i><span class="badge rounded-pill bg-success float-end">2</span>
+                                    <span>Pelanggan</span>
                                 </a>
                             </li>
 
                             <li>
                                 <a href="#" class=" waves-effect">
-                                    <i class="ri-user-3-line"></i><span class="badge rounded-pill bg-success float-end">3</span>
-                                    <span>User Pemesan</span>
+                                    <i class="ri-file-line"></i><span class="badge rounded-pill bg-success float-end">2</span>
+                                    <span>Transaksi</span>
                                 </a>
                             </li>
-                
+
                             <li>
                                 <a href="#" class="waves-effect">
-                                    <i class="ri-dashboard-line"></i><span class="badge rounded-pill bg-success float-end">3</span>
+                                    <i class="ri-file-line"></i><span class="badge rounded-pill bg-success float-end">2</span>
                                     <span>Laporan</span>
                                 </a>
                             </li>

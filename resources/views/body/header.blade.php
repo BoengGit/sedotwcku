@@ -3,7 +3,7 @@
                     <div class="d-flex">
                         <!-- LOGO -->
                         <div class="navbar-brand-box">
-                            <a href="index.html" class="logo logo-dark">
+                            <a href="{{ route('home') }}" class="logo logo-dark">
                                 <span class="logo-sm">
                                     <img src="{{ asset('Backend/assets/images/logo-sm.png') }}" alt="logo-sm" height="22">
                                 </span>
@@ -12,7 +12,7 @@
                                 </span>
                             </a>
 
-                            <a href="index.html" class="logo logo-light">
+                            <a href="{{ route('home') }}" class="logo logo-light">
                                 <span class="logo-sm">
                                     <img src="{{ asset('Backend/assets/images/logo-sm.png') }}" alt="logo-sm-light" height="22">
                                 </span>
@@ -24,7 +24,7 @@
 
                         <button type="button" class="btn btn-sm px-3 font-size-24 header-item waves-effect" id="vertical-menu-btn">
                             <i class="ri-menu-2-line align-middle"></i>
-                        </button>                        
+                        </button>
                     </div>
 
                     <div class="d-flex">
@@ -33,6 +33,9 @@
                                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img class="rounded-circle header-profile-user" src="{{ asset('Backend/assets/images/users/avatar-1.jpg') }}"
                                     alt="Header Avatar">
+                                    @if(Auth::check())
+                                    <span class="d-none d-xl-inline-block ms-1">{{Auth::user()->name}}</span>
+                                    @endif
                                 <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-end">
@@ -40,11 +43,11 @@
                                 <a class="dropdown-item" href="#"><i class="ri-user-line align-middle me-1"></i> Profile</a>
                                 <form action="{{ route('logout') }}" method="POST" >
                                     @csrf
-                                    <button type="submit" class="btn btn-primary w-100"> Logout </button>
+                                    <button type="submit" class="btn btn-danger ms-4"> Logout </button>
                                 </form>
                             </div>
                         </div>
-            
+
                     </div>
                 </div>
             </header>
