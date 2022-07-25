@@ -11,9 +11,7 @@
 |
 */
 
-use Illuminate\Routing\Route;
-
-Routeute::get('/', function () {
+Route::get('/', function () {
     return view('welcome');
     // return redirect('login')
 });
