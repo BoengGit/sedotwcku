@@ -13,20 +13,12 @@ Admin
                             <div class="col-12">
                                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
                                     <h4 class="mb-sm-0">Admin</h4>
-
-                                    <div class="page-title-right">
-                                        <ol class="breadcrumb m-0">
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Tables</a></li>
-
-                                        </ol>
-                                    </div>
-
                                 </div>
                             </div>
                         </div>
                         <!-- end page title -->
                         <div>
-                        <a class="btn btn-primary waves-effect waves-light" href="{{ route('user.create')}}" role="button"> Create (+)</a>
+                        <a class="btn btn-primary waves-effect waves-light" href="{{ route('user.create')}}" role="button"> Create</a>
                         </p>
                         </div>
                         <div class="row">
@@ -55,7 +47,7 @@ Admin
                         <form method="post" action="{{ route('user.destroy',[$row->id]) }}" onsubmit="return confirm('Apakah anda yakin akan menghapus, {{$row->name}}?')">
         @csrf
      {{ method_field('DELETE') }}
-                            <a class="btn btn-outline-secondary btn-sm edit" href="" title="Edit">
+                            <a class="btn btn-outline-secondary btn-sm edit" href="{{route('user.edit',[$row->id])}}" title="Edit">
                              <i class="fas fa-pencil-alt"></i>
                              </a>
                              <button type="submit" class="btn btn-outline-secondary btn-sm edit">
