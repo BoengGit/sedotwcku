@@ -27,13 +27,13 @@
                             </a>
                         </li>
                             <li>
-                                <a href="{{ route('user.index') }}" class="waves-effect">
+                            <a href="{{ route('user.index') }}" class="waves-effect">
                                     <i class="ri-user-line"></i><span class="badge rounded-pill bg-success float-end"></span>
                                     <span>Admin</span>
-                                </a>
+                            </a>
                             </li>
                             <li>
-                                <a href="#" class="waves-effect">
+                                <a href="{{ route('perusahaan.index') }}" class="waves-effect">
                                     <i class="ri-home-4-line"></i><span class="badge rounded-pill bg-success float-end"></span>
                                     <span>Perusahaan</span>
                                 </a>

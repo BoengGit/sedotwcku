@@ -13,12 +13,16 @@ class CreatePerusahaansTable extends Migration
      */
     public function up()
     {
-        Schema::create('perusahaans', function (Blueprint $table) {
+        Schema::create('pelanggans', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name', 50);
+            $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
             $table->string('address', 100);
             $table->string('telepon', 13);
-            $table->timestamps();   
+            $table->string('password');
+            $table->rememberToken();
+            $table->timestamps();
         });
     }
 

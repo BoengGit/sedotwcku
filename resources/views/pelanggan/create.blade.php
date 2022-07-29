@@ -33,7 +33,7 @@ Pelanggan
 
                                             <div class="mb-3">
                                                 <label>Address</label>
-                                                <input type="text" name="address" class="form-control" required="" placeholder="Masukkan alamat">
+                                                <textarea type="text" name="address" class="form-control" required="" placeholder="Masukkan alamat"></textarea>
                                             </div>
                                            <div class="mb-3">
                                                 <label>No Telepon</label>
@@ -45,9 +45,7 @@ Pelanggan
                                                     <div>
                                                         <input name="password" type="password" id="pass2" class="form-control" required="" placeholder="Masukkan Password">
                                                     </div>
-                                                    <div class="mt-3">
-                                                        <input name="password" type="password" id="pass2" class="form-control" required="" placeholder="Masukkan Confirm Password">
-                                                    </div>
+                                                  
                                                 </div>
                                                 <div>
                                                     <button type="submit" class="btn btn-primary waves-effect waves-light me-1">

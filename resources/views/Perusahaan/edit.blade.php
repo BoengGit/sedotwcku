@@ -13,7 +13,7 @@ Pelanggan
             <div class="card">
                 <div class="card-body">
                                         <h4 class="card-title">Edit Pelanggan</h4>
-                                        <form class="custom-validation" method="POST" action="{{ route('pelanggan.update',[$pelanggan->id]) }}" novalidate="">
+                                        <form class="custom-validation" method="POST" action="{{ route('perusahaan.update',[$pelanggan->id]) }}" novalidate="">
                                             @csrf
                                             {{ method_field('PUT') }}
                                             <div class="mb-3">
