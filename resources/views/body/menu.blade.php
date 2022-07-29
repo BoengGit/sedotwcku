@@ -22,39 +22,39 @@
                             <li class="menu-title">Menu</li>
                             <li>
                             <a href="{{ route ('home') }} " class="waves-effect">
-                                <i class="ri-dashboard-line"></i><span class="badge rounded-pill bg-success float-end">2</span>
+                                <i class="ri-dashboard-line"></i><span class="badge rounded-pill bg-success float-end"></span>
                                 <span>Dashboard</span>
                             </a>
                         </li>
                             <li>
                                 <a href="{{ route('user.index') }}" class="waves-effect">
-                                    <i class="ri-user-line"></i><span class="badge rounded-pill bg-success float-end">2</span>
+                                    <i class="ri-user-line"></i><span class="badge rounded-pill bg-success float-end"></span>
                                     <span>Admin</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#" class="waves-effect">
-                                    <i class="ri-home-4-line"></i><span class="badge rounded-pill bg-success float-end">2</span>
+                                    <i class="ri-home-4-line"></i><span class="badge rounded-pill bg-success float-end"></span>
                                     <span>Perusahaan</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="waves-effect">
-                                    <i class="ri-user-line"></i><span class="badge rounded-pill bg-success float-end">2</span>
+                                <a href="{{ route('pelanggan.index') }}" class="waves-effect">
+                                    <i class="ri-user-line"></i><span class="badge rounded-pill bg-success float-end"></span>
                                     <span>Pelanggan</span>
                                 </a>
                             </li>
 
                             <li>
                                 <a href="#" class=" waves-effect">
-                                    <i class="ri-wallet-line"></i><span class="badge rounded-pill bg-success float-end">2</span>
+                                    <i class="ri-wallet-line"></i><span class="badge rounded-pill bg-success float-end"></span>
                                     <span>Transaksi</span>
                                 </a>
                             </li>
 
                             <li>
                                 <a href="#" class="waves-effect">
-                                    <i class="ri-file-line"></i><span class="badge rounded-pill bg-success float-end">2</span>
+                                    <i class="ri-file-line"></i><span class="badge rounded-pill bg-success float-end"></span>
                                     <span>Laporan</span>
                                 </a>
                             </li>

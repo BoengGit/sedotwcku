@@ -35,6 +35,11 @@ Data Siswa
 
                                         <div class="table-responsive">
                                             <table class="table table-editable table-nowrap align-middle table-edits">
+                                            <tr>
+                       <td>Kode User</td>
+
+                       <td>{{ $user->id }}</td>
+                   </tr>
                    <tr>
                        <td>Nama</td>
 

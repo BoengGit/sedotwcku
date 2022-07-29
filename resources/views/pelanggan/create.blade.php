@@ -1,6 +1,6 @@
 @extends('layouts.template')
 @section('title')
-Admin
+Pelanggan
 @endsection
 
 <!-- ini untuk isi home -->
@@ -11,7 +11,7 @@ Admin
             <div class="row">
                 <div class="col-12">
                     <div class="page-title-box">
-                        <h4 class="mb-sm-0">tambah Admin</h4>
+                        <h4 class="mb-sm-0">Tambah Pelanggan</h4>
                     </div>
                 </div>
             </div>
@@ -20,7 +20,7 @@ Admin
                 <div class="card-body">
                 @include('alert.error')
 
-                                        <form class="custom-validation" method="POST" action="{{ route('user.store') }}" novalidate="">
+                                        <form class="custom-validation" method="POST" action="{{ route('pelanggan.store') }}" novalidate="">
                                             @csrf
                                             <div class="mb-3">
                                                 <label>Name</label>
@@ -32,20 +32,28 @@ Admin
                                             </div>
 
                                             <div class="mb-3">
-                                                <label>Password</label>
-                                                <div>
-                                                    <input name="password" type="password" id="pass2" class="form-control" required="" placeholder="Masukkan Password">
-                                                </div>
-                                                <div class="mt-3">
-                                                    <input name="password" type="password" id="pass2" class="form-control" required="" placeholder="Masukkan Confirm Password">
-                                                </div>
+                                                <label>Address</label>
+                                                <input type="text" name="address" class="form-control" required="" placeholder="Masukkan alamat">
+                                            </div>
+                                           <div class="mb-3">
+                                                <label>No Telepon</label>
+                                                <input type="text" name="telepon" class="form-control" required="" placeholder="Masukkan no telepon">
                                             </div>
                                             <div>
+                                                <div class="mb-3">
+                                                    <label>Password</label>
+                                                    <div>
+                                                        <input name="password" type="password" id="pass2" class="form-control" required="" placeholder="Masukkan Password">
+                                                    </div>
+                                                    <div class="mt-3">
+                                                        <input name="password" type="password" id="pass2" class="form-control" required="" placeholder="Masukkan Confirm Password">
+                                                    </div>
+                                                </div>
                                                 <div>
                                                     <button type="submit" class="btn btn-primary waves-effect waves-light me-1">
                                                         Submit
                                                     </button>
-                                                    <a class="btn btn-secondary waves-effect waves-light" href="/user" role="button">Kembali</a>
+                                                    <a class="btn btn-secondary waves-effect waves-light" href="/pelanggan" role="button">Kembali</a>
                                                 </div>
                                             </div>
                                         </form>
