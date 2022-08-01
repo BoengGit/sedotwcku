@@ -47,13 +47,13 @@ return [
     'gt' => [
         'numeric' => 'The :attribute must be greater than :value.',
         'file' => 'The :attribute must be greater than :value kilobytes.',
-        'string' => 'The :attribute must be greater than :value characters.',
+        'string' => 'Kolom :attribute Kolom ini lebih dari 13 karakter.',
         'array' => 'The :attribute must have more than :value items.',
     ],
     'gte' => [
         'numeric' => 'The :attribute must be greater than or equal :value.',
         'file' => 'The :attribute must be greater than or equal :value kilobytes.',
-        'string' => 'The :attribute must be greater than or equal :value characters.',
+        'string' => 'Kolom :attribute Kolom ini lebih dari 13 karakter.',
         'array' => 'The :attribute must have :value items or more.',
     ],
     'image' => 'The :attribute must be an image.',
@@ -79,7 +79,7 @@ return [
     'max' => [
         'numeric' => 'The :attribute may not be greater than :max.',
         'file' => 'The :attribute may not be greater than :max kilobytes.',
-        'string' => 'The :attribute may not be greater than :max characters.',
+        'string' => 'Kolom :attribute Kolom ini lebih dari 13 karakter.',
         'array' => 'The :attribute may not have more than :max items.',
     ],
     'mimes' => 'The :attribute must be a file of type: :values.',

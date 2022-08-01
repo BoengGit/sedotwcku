@@ -1,6 +1,6 @@
 @extends('layouts.template')
 @section('title')
-Data Siswa
+Perusahaan
 @endsection
 
 <!-- ini untuk isi home -->
@@ -12,7 +12,7 @@ Data Siswa
                         <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                    <h4 class="mb-sm-0">Data Pelanggan</h4>
+                                    <h4 class="mb-sm-0">Data perusahaan</h4>
 
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
@@ -36,23 +36,29 @@ Data Siswa
                                         <div class="table-responsive">
                                             <table class="table table-editable table-nowrap align-middle table-edits">
                                             <tr>
-                       <td>Kode pelanggan</td>
+                       <td>Kode perusahaan</td>
 
-                       <td>{{ $pelanggan->id }}</td>
+                       <td>{{ $perusahaan->id }}</td>
                    </tr>
                    <tr>
                        <td>Nama</td>
 
-                       <td>{{ $pelanggan->name }}</td>
+                       <td>{{ $perusahaan->name }}</td>
                    </tr>
 
                    <tr>
-                       <td>Email</td>
+                       <td>Alamat</td>
 
-                       <td>{{ $pelanggan->email }}</td>
+                       <td>{{ $perusahaan->address }}</td>
                    </tr>
+
+                   <tr>
+                    <td>No. Telepon</td>
+
+                    <td>{{ $perusahaan->telepon }}</td>
+                </tr>
                                             </table>
-                                            <a class="btn btn-primary waves-effect waves-light" href="/pelanggan" role="button">Kembali</a>
+                                            <a class="btn btn-primary waves-effect waves-light" href="/perusahaan" role="button">Kembali</a>
                                         </div>
                                     </div>
                                 </div>

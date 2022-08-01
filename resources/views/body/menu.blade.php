@@ -33,7 +33,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="waves-effect">
+                                <a href="{{ route('perusahaan.index') }}" class="waves-effect">
                                     <i class="ri-home-4-line"></i><span class="badge rounded-pill bg-success float-end"></span>
                                     <span>Perusahaan</span>
                                 </a>

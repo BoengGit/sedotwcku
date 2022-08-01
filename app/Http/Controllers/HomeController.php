@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Pelanggan;
+use App\Perusahaan;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -25,6 +27,8 @@ class HomeController extends Controller
     public function index()
     {
         $user = User::count();
+        $pelanggan = Pelanggan::count();
         return view('home', compact('user'));
+        $perusahaan = Perusahaan::count();
     }
 }

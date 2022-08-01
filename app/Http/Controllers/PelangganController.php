@@ -11,7 +11,7 @@ class PelangganController extends Controller
 {
     public function index(Request $request)
     {
-        $pelanggan = pelanggan::get();
+        $pelanggan = pelanggan::paginate(3);
         $filterKeyword = $request->get('keyword');
         if ($filterKeyword)
         {
