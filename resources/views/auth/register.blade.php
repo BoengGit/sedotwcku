@@ -26,9 +26,9 @@
             <div class="container-fluid p-0">
                 <div class="card">
                     <div class="card-body">
+                        @include('alert.error')
 
                         <h4 class="text-muted text-center p-4 font-size-35"><b>Register</b></h4>
-
 
                         <div class="p-3">
                             <form class="form-horizontal mt-3" method="POST" action="{{ route('register') }}">
@@ -36,25 +36,25 @@
 
                                 <div class="form-group mb-3 row">
                                     <div class="col-12">
-                                        <input class="form-control" type="text" name="name" required="" placeholder="Username">
+                                        <input class="form-control" type="text" name="name" placeholder="Username">
                                     </div>
                                 </div>
 
                                 <div class="form-group mb-3 row">
                                     <div class="col-12">
-                                        <input class="form-control" type="email" name="email" required="" placeholder="Email">
+                                        <input class="form-control" type="email" name="email" placeholder="Email">
                                     </div>
                                 </div>
 
                                 <div class="form-group mb-3 row">
                                     <div class="col-12">
-                                        <input class="form-control" type="password" name="password" required="" placeholder="Password">
+                                        <input class="form-control" type="password" name="password" placeholder="Password">
                                     </div>
                                 </div>
 
                                 <div class="form-group mb-3 row">
                                     <div class="col-12">
-                                        <input class="form-control" type="password" name="password_confirmation" required="" placeholder="Password Confirmation" autocomplete="new-password">
+                                        <input class="form-control" type="password" name="password_confirmation" placeholder="Password Confirmation" autocomplete="new-password">
                                     </div>
                                 </div>
 

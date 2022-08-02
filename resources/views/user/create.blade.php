@@ -22,6 +22,7 @@ Admin
 
                                         <form class="custom-validation" method="POST" action="{{ route('user.store') }}" novalidate="">
                                             @csrf
+                                            
                                             <div class="mb-3">
                                                 <label>Name</label>
                                                 <input type="text" name="name" class="form-control" required="" placeholder="Masukkan nama">

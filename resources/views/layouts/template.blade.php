@@ -30,7 +30,7 @@
     </head>
 
     <body data-topbar="dark">
-
+        @include('sweetalert::alert')
     <!-- <body data-layout="horizontal" data-topbar="dark"> -->
 
         <!-- Begin page -->

@@ -21,19 +21,25 @@
     </head>
 
     <body class="auth-body-bg">
+
         <div class="bg-overlay"></div>
         <div class="wrapper-page">
             <div class="container-fluid p-0">
                 <div class="card">
                     <div class="card-body">
-
-
+                        @if($errors->any())
+                        <div class="alert alert-danger" data-bs-dismiss="alert" >
+                            @foreach($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                        
+                                @endforeach
+                        </div>
+                        @endif
                         <h4 class="text-muted text-center p-4 font-size-35"><b>Sign In</b></h4>
 
                         <div class="p-3">
                             <form class="form-horizontal mt-3" method="POST" action="{{ route('login') }}">
                             @csrf
-
                                 <div class="form-group mb-3 row">
                                     <div class="col-12">
                                         <input class="form-control" type="text" name="email" placeholder="Email">

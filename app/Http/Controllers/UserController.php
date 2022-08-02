@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Arr;
 Use App\User;
 use Validator;
@@ -42,6 +43,7 @@ class UserController extends Controller
 
         $data['password'] = bcrypt($data['password']);
         User::create($data);
+        Alert::toast('Berhasil di tambahkan', 'Successs');
         return redirect()->route('user.index');
     }//end method
 
@@ -49,6 +51,7 @@ class UserController extends Controller
     {
         $data = User::findOrFail($id);
         $data->delete();
+        Alert::toast('Berhasil di Hapus', 'Successs');
         return redirect()->route('user.index');
     }//end method
 
@@ -95,7 +98,7 @@ class UserController extends Controller
            $data = Arr::except($data,['password']);
       }
        $user->update($data);
-    //    Alert::toast('Berhasil di edit','success');
+        Alert::toast('Berhasil di edit','success');
        return redirect()->route('user.index');
     }
 
