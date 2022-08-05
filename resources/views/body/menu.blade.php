@@ -11,7 +11,7 @@
                             @if(Auth::check())
                             <h4 class="font-size-16 mb-1">{{Auth::user()->name }}</h4>
                             @endif
-                            <span class="text-muted"><i class="ri-record-circle-line align-middle font-size-14 text-success"></i> Online</span>
+                            <span class="text-muted"><i class="ri-record-circle-line align-middle font-size-14 text-success"></i>{{ Auth::user()->level }}</span>
                         </div>
                     </div>
 

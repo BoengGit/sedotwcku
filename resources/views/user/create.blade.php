@@ -25,20 +25,35 @@ Admin
                                             
                                             <div class="mb-3">
                                                 <label>Name</label>
-                                                <input type="text" name="name" class="form-control" required="" placeholder="Masukkan nama">
+                                                <div>
+                                                    <input type="text" name="name" class="form-control" required="" placeholder="Masukkan nama">
+                                                </div>   
+                                            </div>
+                                            <div class="mb-3">
+                                                <label>Username</label>
+                                                <div>
+                                                    <input type="text" name="username" class="form-control" required="" placeholder="Masukkan Username">
+                                                </div>
                                             </div>
                                             <div class="mb-3">
                                                 <label>Email</label>
-                                                <input type="text" name="email" class="form-control" required="" placeholder="Masukkan email">
+                                                <div>
+                                                    <input type="text" name="email" class="form-control" required="" placeholder="Masukkan email">
+                                                </div>
                                             </div>
-
+                                            <div class="mb-3">
+                                                <label>Level</label>
+                                                <select name="level" class="form-select" aria-label="Default select example">
+                                                        <option selected="">Pilih Level</option>
+                                                        <option value="admin">Admin</option>
+                                                        <option value="perusahaan">Perusahaan</option>
+                                                        <option value="pelanggan">Pelanggan</option>
+                                                </select>
+                                            </div>
                                             <div class="mb-3">
                                                 <label>Password</label>
                                                 <div>
                                                     <input name="password" type="password" id="pass2" class="form-control" required="" placeholder="Masukkan Password">
-                                                </div>
-                                                <div class="mt-3">
-                                                    <input name="password" type="password" id="pass2" class="form-control" required="" placeholder="Masukkan Confirm Password">
                                                 </div>
                                             </div>
                                             <div>

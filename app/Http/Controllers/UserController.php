@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 use Illuminate\Support\Arr;
-Use App\User;
+use App\User;
 use Validator;
 
 
@@ -15,29 +15,27 @@ class UserController extends Controller
     {
         $user = User::paginate(3);
         $filterKeyword = $request->get('keyword');
-        if ($filterKeyword)
-        {
-            $user = User::where('name','LIKE',"%$filterKeyword%")->paginate(1);
+        if ($filterKeyword) {
+            $user = User::where('name', 'LIKE', "%$filterKeyword%")->paginate(1);
         }
         return view('user.index', compact('user'));
-    }//end method
+    } //end method
 
     public function create()
     {
         return view('user.create');
-    }//end method
+    } //end method
 
     public function store(Request $request)
     {
         $data = $request->all();
-        $validasi = Validator::make($data,[
-            'name'=>'required|max:255',
-            'email'=>'required|email|max:255|unique:users',
-            'password'=>'required|min:8',
+        $validasi = Validator::make($data, [
+            'name' => 'required|max:255',
+            'email' => 'required|email|max:255|unique:users',
+            'password' => 'required|min:8',
 
         ]);
-        if($validasi->fails())
-        {
+        if ($validasi->fails()) {
             return redirect()->route('user.create')->withInput()->withErrors($validasi);
         }
 
@@ -45,7 +43,7 @@ class UserController extends Controller
         User::create($data);
         Alert::toast('Berhasil di tambahkan', 'Successs');
         return redirect()->route('user.index');
-    }//end method
+    } //end method
 
     public function destroy($id)
     {
@@ -53,18 +51,18 @@ class UserController extends Controller
         $data->delete();
         Alert::toast('Berhasil di Hapus', 'Successs');
         return redirect()->route('user.index');
-    }//end method
+    } //end method
 
 
     public function show($id)
     {
         $user = User::findOrFail($id);
-        return view('user.show',compact('user'));
+        return view('user.show', compact('user'));
     }
     public function edit($id)
     {
         $user = User::findOrFail($id);
-        return view('user.edit',compact('user'));
+        return view('user.edit', compact('user'));
     }
 
     /**
@@ -76,30 +74,26 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-    $user = User::findOrFail($id);
-    $data = $request->all();
-    $validasi = Validator::make($data,[
-     'name'=>'required|max:255',
-            'email'=>'required|email|max:255|unique:users,email,'.$id,
-            // 'username'=>'required|max:100|unique:users,username,'.$id,
-            'password'=>'sometimes|nullable|min:6'
+        $user = User::findOrFail($id);
+        $data = $request->all();
+        $validasi = Validator::make($data, [
+            'name' => 'required|max:255',
+            'username' => 'required|max:255',
+            'email' => 'required|email|max:255|unique:users,email,' . $id,
+            'level' => 'required',
+            'password' => 'sometimes|nullable|min:6'
         ]);
-        if($validasi->fails())
-        {
-            return redirect()->route('user.create',[$id])->withErrors($validasi);
+        if ($validasi->fails()) {
+            return redirect()->route('user.create', [$id])->withErrors($validasi);
         }
 
-      if($request->input('password'))
-     {
-         $data['password'] = bcrypt($data['password']);
+        if ($request->input('password')) {
+            $data['password'] = bcrypt($data['password']);
+        } else {
+            $data = Arr::except($data, ['password']);
+        }
+        $user->update($data);
+        Alert::toast('Berhasil di edit', 'success');
+        return redirect()->route('user.index');
     }
-      else
-      {
-           $data = Arr::except($data,['password']);
-      }
-       $user->update($data);
-        Alert::toast('Berhasil di edit','success');
-       return redirect()->route('user.index');
-    }
-
 }

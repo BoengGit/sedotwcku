@@ -21,10 +21,24 @@ Admin
                                                 <input type="text" name="name" class="form-control" required=""value="{{ $user->name }}">
                                             </div>
                                             <div class="mb-3">
+                                                <label>Username</label>
+                                                <div>
+                                                    <input type="text" name="name" class="form-control" required="" value="{{ $user->username}}">
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
                                                 <label>Email</label>
                                                 <input type="text" name="email" class="form-control" required="" value="{{ $user->email }}">
                                             </div>
-
+                                            <div class="mb-3">
+                                                <label>Level</label>
+                                                <select name="level" class="form-select" aria-label="Default select example">
+                                                        <option selected="">Pilih Level</option>
+                                                        <option value="admin" @if($user->level == "admin") selected @endif>Admin</option>
+                                                        <option value="perusahaan" @if($user->level == "perusahaan") selected @endif>Perusahaan</option>
+                                                        <option value="pelanggan" @if($user->level == "pelanggan") selected @endif>Pelanggan</option>
+                                                </select>
+                                            </div>
                                             <div class="mb-3">
                                                 <label>Password</label>
                                                 <div>
