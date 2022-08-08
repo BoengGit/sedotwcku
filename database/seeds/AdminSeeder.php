@@ -13,29 +13,32 @@ class AdminSeeder extends Seeder
     {
         $user = new \App\User;
         $user->name = "Bajang";
-        $user->username = "admin";
+        $user->address = "Jalan kp jembatan";
+        $user->telepon = "000000000";
         $user->email = "admin@gmail.com";
         $user->level = "admin";
-        $user->password = \Hash::make("123");
+        $user->password = bcrypt('password');
         $user->save();
         $this->command->info("admin ditambahakan");
 
-        $user1 = new \App\User;
-        $user1->name = "Gilang";
-        $user1->username = "Pelanggan";
-        $user1->email = "pelanggan@gmail.com";
-        $user1->level = "pelanggan";
-        $user1->password = \Hash::make("123");
-        $user1->save();
+        $user = new \App\User;
+        $user->name = "Gilang";
+        $user->address = "Jalan kp jembatan";
+        $user->telepon = "000000000";
+        $user->email = "pelanggan@gmail.com";
+        $user->level = "pelanggan";
+        $user->password = bcrypt('password');
+        $user->save();
         $this->command->info("pelanggan ditambahakan");
 
-        $user2 = new \App\User;
-        $user2->name = "Serbaguna";
-        $user2->username = "perusahaan";
-        $user2->email = "perusahaan@gmail.com";
-        $user2->level = "perusahaan";
-        $user2->password = \Hash::make("123");
-        $user2->save();
+        $user = new \App\User;
+        $user->name = "Serbaguna";
+        $user->address = "Jalan kp jembatann";
+        $user->telepon = "000000000";
+        $user->email = "perusahaan@gmail.com";
+        $user->level = "perusahaan";
+        $user->password = bcrypt('password');
+        $user->save();
         $this->command->info("perusahaan ditambahakan");
     }
 }

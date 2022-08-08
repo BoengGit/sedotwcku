@@ -22,7 +22,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#page-top">Yooo</a>
+                <a class="navbar-brand" href="#page-top">FreshFlush</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto my-2 my-lg-0">
@@ -37,18 +37,18 @@
             <div class="container px-4 px-lg-5 h-100">
                 <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
                     <div class="col-lg-8 align-self-end">
-                        <h1 class="text-white font-weight-bold">Temani Hidupmu</h1>
+                        <h1 class="text-white font-weight-bold">FreshFlush</h1>
                         <hr class="divider" />
                     </div>
                     <div class="col-lg-8 align-self-baseline">
-                        <p class="text-white-75 mb-5"> Kata itulah yang banyak diceritakan dan menjadi goal dari banyak orang, salah satunya mungkin kamu. Di dalam hari-harinya, orang berjuang untuk mendapatkan kebahagiaan diri sendiri. Yang mengejutkan, momen-momen yang membahagiakan itu acap tidak harus bersangkutan dengan sesuatu yang bersifat heroik dan membutuhkan uang yang banyak. Acapkali momen itu justru muncul dari sejumlah aktivitas yang remeh temeh, murah meriah, dan muncul dalam rutinitas keseharian kita.   </p>
+                        <p class="text-white-75 mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum culpa quos consectetur molestias voluptatum maxime ea expedita quo amet, neque odio delectus earum repellat consequuntur quaerat? Repellendus dolorem veritatis placeat?</p>
                     </div>
                 </div>
             </div>
         </header>
         <!-- Footer-->
         <footer class="bg-light py-5">
-            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2022 - Yo</div></div>
+            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2022 - FreshFlush v.1</div></div>
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>

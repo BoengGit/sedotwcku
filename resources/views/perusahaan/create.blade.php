@@ -27,14 +27,14 @@ Perusahaan
                                                 <input type="text" name="name" class="form-control" required="" placeholder="Masukkan nama">
                                             </div>
 
-                                            <div class="mb-3">
-                                                <label>Address</label>
-                                                <input type="text" name="address" class="form-control" required="" placeholder="Masukkan alamat">
-                                            </div>
                                            <div class="mb-3">
                                                 <label>No Telepon</label>
                                                 <input type="text" name="telepon" class="form-control" required="" placeholder="Masukkan no telepon">
                                             </div>
+                                            <div class="mb-3">
+                                                <label for="">Address</label>
+                                                <textarea class="form-control" name="address" aria-label="With textarea" type="text" placeholder="Masukkan alamat"></textarea>
+                                              </div>
                                             <div>
                                                 <div>
                                                     <button type="submit" class="btn btn-primary waves-effect waves-light me-1">

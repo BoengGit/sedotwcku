@@ -20,8 +20,25 @@ Pelanggan
                         <!-- end page title -->
                         <div>
                         <a class="btn btn-primary waves-effect waves-light" href="{{ route('pelanggan.create')}}" role="button"> Create</a>
-                        </p>
                         </div>
+                        <form class="mt-3 mb-4" method="get" action="{{ route('pelanggan.index') }}">
+                            <div class="form-group">
+                                <table>
+                                    <td>
+                                        <div class="col-sm-16">
+                                        <input type="text" class="form-control" id="keyword" placeholder="Cari nama" name="keyword" value="{{ Request::get('keyword') }}">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="col-sm-4">
+                                            <button type="submit" class="btn btn-info">
+                                                <span class="fa fa-search"></span>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </table>
+                            </div>
+                        </form>
                         <div class="row">
                             <div class="col-12">
                                 <div class="card">
@@ -37,7 +54,7 @@ Pelanggan
                                                         <th>Email</th>
                                                         <th>Alamat</th>
                                                         <th>No Telepon</th>
-                                                        <th>Edit</th>
+                                                        <th>Action</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>

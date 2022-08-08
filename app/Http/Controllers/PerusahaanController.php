@@ -5,13 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 Use App\Perusahaan;
+use App\User;
 use Validator;
 
 class PerusahaanController extends Controller
 {
     public function index(Request $request)
     {
-        $perusahaan = perusahaan::paginate(3);
+        $perusahaan = User::where('level', 'perusahaan')->paginate(3);
         $filterKeyword = $request->get('keyword');
         if ($filterKeyword)
         {

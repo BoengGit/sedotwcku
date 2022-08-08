@@ -13,7 +13,7 @@ class UserController extends Controller
 {
     public function index(Request $request)
     {
-        $user = User::paginate(3);
+        $user = User::where('level', 'admin')->paginate(3);
         $filterKeyword = $request->get('keyword');
         if ($filterKeyword) {
             $user = User::where('name', 'LIKE', "%$filterKeyword%")->paginate(1);

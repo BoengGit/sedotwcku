@@ -20,12 +20,13 @@
                         <!-- Left Menu Start -->
                         <ul class="metismenu list-unstyled" id="side-menu">
                             <li class="menu-title">Menu</li>
+                            @if(Auth::user()->level == 'admin')
                             <li>
-                            <a href="{{ route ('home') }} " class="waves-effect">
-                                <i class="ri-dashboard-line"></i><span class="badge rounded-pill bg-success float-end"></span>
-                                <span>Dashboard</span>
-                            </a>
-                        </li>
+                                <a href="{{ route ('home') }} " class="waves-effect">
+                                    <i class="ri-dashboard-line"></i><span class="badge rounded-pill bg-success float-end"></span>
+                                    <span>Dashboard</span>
+                                </a>
+                            </li>
                             <li>
                                 <a href="{{ route('user.index') }}" class="waves-effect">
                                     <i class="ri-user-line"></i><span class="badge rounded-pill bg-success float-end"></span>
@@ -58,6 +59,24 @@
                                     <span>Laporan</span>
                                 </a>
                             </li>
+                            @endif
+
+                            @if(Auth::user()->level == 'pelanggan')
+                            <li>
+                                <a href="#" class=" waves-effect">
+                                    <i class="ri-wallet-line"></i><span class="badge rounded-pill bg-success float-end"></span>
+                                    <span>Transaksi</span>
+                                </a>
+                            </li>
+                            @endif
+                            @if(Auth::user()->level == 'perusahaan')
+                            <li>
+                                <a href="#" class=" waves-effect">
+                                    <i class="ri-wallet-line"></i><span class="badge rounded-pill bg-success float-end"></span>
+                                    <span>Transaksi</span>
+                                </a>
+                            </li>
+                            @endif
                         </ul>
                     </div>
                     <!-- Sidebar -->

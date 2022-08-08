@@ -28,7 +28,7 @@ class HomeController extends Controller
     {
         $user = User::count();
         $pelanggan = Pelanggan::count();
-        return view('home', compact('user'));
         $perusahaan = Perusahaan::count();
+        return view('home', compact('user','perusahaan','pelanggan'));
     }
 }

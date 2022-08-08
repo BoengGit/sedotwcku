@@ -53,7 +53,7 @@ Dashboard
                         <div class="d-flex">
                             <div class="flex-grow-1">
                                 <p class="text-truncate font-size-14 mb-2">Total Perusahaan</p>
-                                <h4 class="mb-2">{{ $user }}</h4>
+                                <h4 class="mb-2">{{ $pelanggan }}</h4>
                             </div>
                             <div class="avatar-sm">
                                 <span class="avatar-title bg-light text-success rounded-3">
@@ -70,7 +70,7 @@ Dashboard
                         <div class="d-flex">
                             <div class="flex-grow-1">
                                 <p class="text-truncate font-size-14 mb-2">Total Pelanggan</p>
-                                <h4 class="mb-2">{{ $user }}</h4>
+                                <h4 class="mb-2">{{ $perusahaan }}</h4>
                             </div>
                             <div class="avatar-sm">
                                 <span class="avatar-title bg-light text-primary rounded-3">
@@ -87,7 +87,7 @@ Dashboard
                         <div class="d-flex">
                             <div class="flex-grow-1">
                                 <p class="text-truncate font-size-14 mb-2">Total Transaksi</p>
-                                <h4 class="mb-2">{{ $user }}</h4>
+                                <h4 class="mb-2">110</h4>
                             </div>
                             <div class="avatar-sm">
                                 <span class="avatar-title bg-light text-success rounded-3">

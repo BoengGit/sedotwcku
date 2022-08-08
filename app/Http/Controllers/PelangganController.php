@@ -4,18 +4,19 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
-Use App\Pelanggan;
+use App\User;
 use Validator;
 
 class PelangganController extends Controller
 {
     public function index(Request $request)
     {
-        $pelanggan = pelanggan::paginate(3);
+        $pelanggan = User::where('level', 'pelanggan')->paginate(3);
+
         $filterKeyword = $request->get('keyword');
         if ($filterKeyword)
         {
-            $pelanggan = pelanggan::where('name','LIKE',"%$filterKeyword%")->paginate(1);
+            $pelanggan = User::where('name','LIKE',"%$filterKeyword%")->paginate(1);
         }
         return view('pelanggan.index', compact('pelanggan'));
     }//end method
@@ -42,13 +43,13 @@ class PelangganController extends Controller
         }
 
         $data['password'] = bcrypt($data['password']);
-        pelanggan::create($data);
+        User::create($data);
         return redirect()->route('pelanggan.index');
     }//end method
 
     public function destroy($id)
     {
-        $data = pelanggan::findOrFail($id);
+        $data = User::findOrFail($id);
         $data->delete();
         return redirect()->route('pelanggan.index');
     }//end method
@@ -56,12 +57,12 @@ class PelangganController extends Controller
 
     public function show($id)
     {
-        $pelanggan = pelanggan::findOrFail($id);
+        $pelanggan = User::findOrFail($id);
         return view('pelanggan.show',compact('pelanggan'));
     }
     public function edit($id)
     {
-        $pelanggan = pelanggan::findOrFail($id);
+        $pelanggan = User::findOrFail($id);
         return view('pelanggan.edit',compact('pelanggan'));
     }
 
@@ -74,7 +75,7 @@ class PelangganController extends Controller
      */
     public function update(Request $request, $id)
     {
-    $pelanggan = pelanggan::findOrFail($id);
+    $pelanggan = User::findOrFail($id);
     $data = $request->all();
     $validasi = Validator::make($data,[
      'name'=>'required|max:255',

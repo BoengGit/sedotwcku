@@ -19,18 +19,17 @@ Admin
                         </div>
                         <!-- end page title -->
                         <div>
-                        <a class="btn btn-primary waves-effect waves-light" href="{{ route('user.create')}}" role="button">Create +</a>
-                        </p>
+                        <a class="btn btn-primary waves-effect waves-light" href="{{ route('user.create')}}" role="button">Create</a>
                         </div>
 
                         <!-- fungsi cari -->
 
-                        <form method="get" action="{{ route('user.index') }}">
+                        <form class="mt-3 mb-4" method="get" action="{{ route('user.index') }}">
                             <div class="form-group">
                                 <table>
                                     <td>
                                         <div class="col-sm-16">
-                                        <input type="text" class="form-control" id="keyword" placeholder="cari nama" name="keyword" value="{{ Request::get('keyword') }}">
+                                        <input type="text" class="form-control" id="keyword" placeholder="Cari nama" name="keyword" value="{{ Request::get('keyword') }}">
                                         </div>
                                     </td>
                                     <td>
@@ -56,10 +55,9 @@ Admin
                                                     <tr style="cursor: pointer;">
                                                         <th>ID</th>
                                                         <th>Name</th>
-                                                        <th>Username</th>
                                                         <th>Email</th>
                                                         <th>Level</th>
-                                                        <th>Edit</th>
+                                                        <th>Action</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -67,7 +65,6 @@ Admin
                     <tr>
                         <td>{{ $loop->iteration + ($user->perpage() *  ($user->currentPage() -1)) }}</td>
                         <td>{{ $row->name }}</td>
-                        <td>{{ $row->username }}</td>
                         <td>{{ $row->email }}</td>
                         <td>{{ $row->level }}</td>
                         <td>

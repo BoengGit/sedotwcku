@@ -30,14 +30,13 @@ Pelanggan
                                                 <label>Email</label>
                                                 <input type="text" name="email" class="form-control" required="" placeholder="Masukkan email">
                                             </div>
-
-                                            <div class="mb-3">
-                                                <label>Address</label>
-                                                <input type="text" name="address" class="form-control" required="" placeholder="Masukkan alamat">
-                                            </div>
                                            <div class="mb-3">
                                                 <label>No Telepon</label>
                                                 <input type="text" name="telepon" class="form-control" required="" placeholder="Masukkan no telepon">
+                                            </div>
+                                            <div class="mb-3">
+                                                <label>Address</label>
+                                                <textarea class="form-control" name="address" aria-label="With textarea" type="text" placeholder="Masukkan alamat"></textarea>
                                             </div>
                                             <div>
                                                 <div class="mb-3">
