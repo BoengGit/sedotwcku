@@ -34,7 +34,14 @@ Perusahaan
                                             <div class="mb-3">
                                                 <label for="">Address</label>
                                                 <textarea class="form-control" name="address" aria-label="With textarea" type="text" placeholder="Masukkan alamat"></textarea>
-                                              </div>
+                                            </div>
+                                            <div class="mb3">
+                                                <h4 class="card-title">Unggah Foto</h4>
+                                                <div class="mb-3">
+                                                    <input type="file" class="form-control" id="customFile" name="foto">
+                                                </div>                                                
+                                            </div>
+                                            
                                             <div>
                                                 <div>
                                                     <button type="submit" class="btn btn-primary waves-effect waves-light me-1">

@@ -8,6 +8,6 @@ class Perusahaan extends Model
 {
     protected $primaryKey = 'id';
     protected $guarded = [
-       'id'
+        'id', 'foto'
     ];
 }
